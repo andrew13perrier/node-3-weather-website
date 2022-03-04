@@ -27,7 +27,7 @@ const request = require("request")
         } else if (body.error) {
             callback("Unable to find location", undefined)
         } else {
-            callback(undefined, console.log(body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + "degrees out. Is feels like " + body.current.feelslike + " degrees out. "))
+            callback(undefined, console.log(body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + "degrees out. Is feels like " + body.current.feelslike + " degrees out. " + " The humidity is " + body.current.humidity + " percent."))
         }
     })
 
